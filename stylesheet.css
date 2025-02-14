@@ -1,0 +1,109 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: cursor 0.3s ease-in-out;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-item img {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.menu-item:hover img {
+  filter: invert(68%) sepia(67%) saturate(247%) hue-rotate(75deg) brightness(102%) contrast(102%);
+}
+#home {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+.about-feature-section {
+  opacity: 0;
+  transform: translateY(30px); /* Inicia os elementos fora da tela */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-visible {
+  opacity: 1; /* Torna os elementos visíveis */
+  transform: translateY(0); /* Faz os itens "caírem" suavemente */
+}
+
+.about-hidden {
+  opacity: 0; /* Esconde os itens */
+  transform: translateY(-10px); /* Faz os itens "subirem" quando saem da tela */
+}
+
+
+
+
+.swiper-wrapper {
+  transition-timing-function: linear !important; /* Faz o movimento ser constante */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*faq*/
+.faq-item {
+  opacity: 0;
+  transform: translateY(30px); /* Inicia os itens "fora" da tela */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.faq-visible {
+  opacity: 1; /* Torna os itens visíveis */
+  transform: translateY(0); /* Faz os itens subirem suavemente */
+}
+
+.faq-hidden {
+  opacity: 0; /* Esconde os itens */
+  transform: translateY(-10px); /* Faz os itens "subirem" quando saem da tela */
+}
+
+
+
+/* Inicializa a animação de "caindo" e "subindo" para o título */
+.faq-title {
+  opacity: 0;
+  transform: translateY(30px); /* O título começa fora da tela, mais abaixo */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Quando o título entra na tela */
+.faq-title-visible {
+  opacity: 1;
+  transform: translateY(0); /* O título desce suavemente para sua posição original */
+}
+.faq-title-hidden {
+  opacity: 0; /* Esconde os itens */
+  transform: translateY(-10px); /* Faz os itens "subirem" quando saem da tela */
+}
