@@ -14,15 +14,16 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="script.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="mt-2 min-h-screen flex justify-center bg-black">
+
   <!-- Main container -->
   <main class="bg-black text-black w-full flex flex-col items-center max-w-[1400px] px-4 sm:px-8 lg:px-16">
     <!--Nav-->
     <nav class="py-5 sm:py-6 lg:py-8 flex justify-between items-center w-full flex-wrap">
-      <span class="text-2xl cursor-pointer select-none sm:text-3xl lg:text-4xl text-white font-bold">DEMS</span>
+      <a href="index.html" class="text-2xl cursor-pointer sm:text-3xl lg:text-4xl text-white font-bold">DEMS</a>
       <div class="space-x-4 sm:space-x-8 flex items-center">
         <button
           class="bg-white text-black px-5 text-base sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#42FD64] duration-300 ease-in-out text-sm sm:text-base">Contact</button>
@@ -33,125 +34,207 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+        <button id="scroll-btn" class="hidden xl:block group fixed bottom-20 right-20 p-4 text-white border border-[#262626] hover:border-gray-300 transition duration-300 ease-in-out rounded-full">
+          <svg class="w-6 h-6 text-[#262626] group-hover:text-gray-300 transition duration-300 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+        </svg>
+        </button>
       </div>
     </nav>
     <!-- Home -->
     <section id="home" class="w-full max-w-[1400px] mx-auto">
       <div class="grid grid-cols-1 w-full text-black text-center mt-12">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="mt-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-left font-bold tracking-wide leading-none">
+          <div class="mt-8 text-6xl sm:text-7xl md:text-7xl lg:text-8xl text-left font-bold tracking-wide leading-none">
             <span class="block text-white">Dynamic</span>
             <span class="block text-[#42FD64]">Emergency</span>
             <span class="block text-[#FDDC42]">Monitoring</span>
             <span class="block text-[#FD6442]">System</span>
           </div>
-          <div class="flex items-center justify-center text-white">
-            <h1>Uma informação qualquer</h1>
+
+          <div class="grid grid-cols-4 grid-rows-1 md:grid-rows-2 md:grid-cols-1 gap-4 text-white">
+            <div class="flex flex-col items-start md:items-end md:text-right mt-12 md:mt-12 lg:mt-16">
+              <span class="text-[#42FD64] text-6xl md:text-7xl lg:text-8xl">98<span class="text-base">%</span></span>
+              <span class="text-xl sm:text-3xl">Eficiência</span>
+            </div>
+            <div class="flex flex-col items-start md:items-end md:text-right mt-12 md:mt-4 lg:mt-8">
+              <span class="text-[#42A5FD] text-6xl md:text-7xl lg:text-8xl">85<span class="text-base">ms</span></span>
+              <span class="text-xl sm:text-3xl">Latência</span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="w-full">
+          <div class="text-white text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-10 md:mt-12">
+            <span class="block">Your Life, Our Priority</span>
+            <span class="block xl:ml-8 hidden md:block">Real-Time Care When It Matters Most</span>
+            <span class="block xl:ml-8 md:hidden">Real-Time Care</span>
           </div>
         </div>
 
-        <div class="w-full">
-          <div class="text-white text-left text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-12">
-            <span class="block">Your Life, Our Priority</span>
-            <span class="block ml-0 sm:ml-6 md:ml-12 lg:ml-16">Real-Time Care When It Matters Most</span>
-          </div>
-        </div>
       </div>
     </section>
 
-    <div class="bg-[#262626] mt-20 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
+    <div class="bg-[#262626] mt-60 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
       <!-- About Section -->
       <section id="about" class="text-white about-feature-section">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
           <div class="text-left text-4xl about-text">
-            About <span class="font-bold text-[#42FD64]">DEMS</span>
+            About <span class="font-semibold  text-[#42FD64] italic"
+              style="font-family: 'Playfair Display', serif;">DEMS</span>
           </div>
           <p class="text-lg text-justify about-text">
             DEMS (Dynamic Emergency Monitoring System) is a cutting-edge technology designed to monitor vital signs in
             real-time, ensuring rapid emergency response and optimized healthcare management.
           </p>
         </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-8 about-feature-section">
+          <div class="flex flex-col items-center about-text">
+            <figure class="text-center">
+              <img src="assets/efficiency.png" alt="Efficiency" class="w-40 h-40 object-cover rounded-lg mt-12">
+              <figcaption class="text-lg mt-6 text-white">Efficiency</figcaption>
+            </figure>
+          </div>
+          <div class="flex flex-col items-center about-text">
+            <figure class="text-center">
+              <img src="assets/security.png" alt="Security" class="w-40 h-40 rounded-lg mt-12">
+              <figcaption class="text-lg mt-6 text-white">Security</figcaption>
+            </figure>
+          </div>
+          <div class="flex flex-col items-center about-text">
+            <figure class="text-center">
+              <img src="assets/innovation.png" alt="Innovation" class="w-40 h-40 rounded-lg mt-12">
+              <figcaption class="text-lg mt-6 text-white">Innovation</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
-
-      <!-- Features Section -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-8 about-feature-section">
-        <div class="flex flex-col items-center about-text">
-          <figure class="text-center">
-            <img src="assets/efficiency.png" alt="Efficiency" class="w-40 h-40 object-cover rounded-lg mt-12">
-            <figcaption class="text-lg mt-6 text-white">Efficiency</figcaption>
-          </figure>
-        </div>
-        <div class="flex flex-col items-center about-text">
-          <figure class="text-center">
-            <img src="assets/security.png" alt="Security" class="w-40 h-40 rounded-lg mt-12">
-            <figcaption class="text-lg mt-6 text-white">Security</figcaption>
-          </figure>
-        </div>
-        <div class="flex flex-col items-center about-text">
-          <figure class="text-center">
-            <img src="assets/innovation.png" alt="Innovation" class="w-40 h-40 rounded-lg mt-12">
-            <figcaption class="text-lg mt-6 text-white">Innovation</figcaption>
-          </figure>
-        </div>
-      </div>
     </div>
-
 
     <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
       <!-- Team Section -->
       <section id="team" class="text-white">
-        <div class="text-left text-4xl">Meet the<span class="font-semibold text-[#42FD64]"> Team</span></div>
+        <div class="text-left text-4xl">Meet the<span class="font-semibold italic text-[#42FD64]"
+            style="font-family: 'Playfair Display', serif;"> Team</span></div>
         <div class="w-full relative mt-12">
           <div class="swiper multiple-slide-carousel swiper-container relative">
-
             <div class="swiper-wrapper mb-16">
-
               <div class="swiper-slide">
-                <div class="bg-[#42FD64] rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center">
-
+                <div
+                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
+                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
                 </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="bg-[#42FD64]  rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="bg-[#42FD64] rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center">
-
+                <div class="text-left text-lg tracking-wide">
+                  <span>Gustavo Zacarias</span>
+                  <span class="text-white text-opacity-40"> Website</span>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="bg-[#42FD64] rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center">
-
+                <div
+                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
+                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
+                </div>
+                <div class="text-left text-lg tracking-wide">
+                  <span>Gustavo Zacarias</span>
+                  <span class="text-white text-opacity-40"> Website</span>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="bg-[#42FD64] rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center">
-
+                <div
+                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
+                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
+                </div>
+                <div class="text-left text-lg tracking-wide">
+                  <span>Gustavo Zacarias</span>
+                  <span class="text-white text-opacity-40"> Website</span>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="bg-[#42FD64] rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center">
-
+                <div
+                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
+                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
+                </div>
+                <div class="text-left text-lg tracking-wide">
+                  <span>Gustavo Zacarias</span>
+                  <span class="text-white text-opacity-40"> Website</span>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
+                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
+                </div>
+                <div class="text-left text-lg tracking-wide">
+                  <span>Gustavo Zacarias</span>
+                  <span class="text-white text-opacity-40"> Website</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
+                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
+                </div>
+                <div class="text-left text-lg tracking-wide">
+                  <span>Gustavo Zacarias</span>
+                  <span class="text-white text-opacity-40"> Website</span>
+                </div>
+              </div>
+
             </div>
           </div>
+        </div>
+      </section>
+    </div>
 
+    <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
+      <section id="blog" class="text-white">
+        <div class="text-left text-4xl about-text">
+          Our <span class="font-semibold  text-[#42FD64] italic"
+            style="font-family: 'Playfair Display', serif;">Blog</span>
+        </div>
+        <div class="graph" >
+          <ul class="months">
+            <li>Feb</li>
+            <li>Mar</li>
+            <li>Apr</li>
+            <li>May</li>
+            <li>Jun</li>
+            <li>Jul</li>
+          </ul>
+          <ul class="days">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul class="squares">
+          </ul>
+        </div>
       </section>
     </div>
 
     <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
       <section id="faq" class="text-white">
         <div class="text-left text-4xl faq-title">
-          Common<span class="font-semibold text-[#42FD64]"> Asked</span>
+          Common<span class="font-semibold italic text-[#42FD64]" style="font-family: 'Playfair Display', serif;">
+            Asked</span>
         </div>
         <div class="hs-accordion-group mt-6">
+
           <!-- FAQ Item -->
-          <div class="faq-item bg-[#333333] border rounded-xl overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              What is DEMS?
+          <div
+            class="faq-item bg-[#333333] border border-[#333333] rounded-xl overflow-hidden transition-all duration-300">
+            <button
+              class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
+              <span>What is DEMS?</span>
+              <span class="toggle-icon text-2xl">+</span>
             </button>
             <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
               DEMS is an innovative emergency monitoring system that uses wearable sensors to collect real-time vital
@@ -159,10 +242,12 @@
             </div>
           </div>
 
-          <!-- FAQ Item -->
-          <div class="faq-item bg-[#333333] border rounded-xl mt-2 overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              How does DEMS work?
+          <div
+            class="faq-item bg-[#333333] border border-[#333333] rounded-xl mt-2 overflow-hidden transition-all duration-300">
+            <button
+              class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
+              <span>How does DEMS work?</span>
+              <span class="toggle-icon text-2xl">+</span>
             </button>
             <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
               The DEMS wristband measures vital signs such as heart rate, blood oxygen levels, and body temperature,
@@ -170,9 +255,12 @@
             </div>
           </div>
 
-          <div class="faq-item bg-[#333333] border rounded-xl mt-2 overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              Who can use DEMS?
+          <div
+            class="faq-item bg-[#333333] border border-[#333333] rounded-xl mt-2 overflow-hidden transition-all duration-300">
+            <button
+              class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
+              <span>Who can use DEMS?</span>
+              <span class="toggle-icon text-2xl">+</span>
             </button>
             <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
               DEMS can be used by hospitals, emergency services, clinics, nursing homes, and even in sports events for
@@ -180,9 +268,12 @@
             </div>
           </div>
 
-          <div class="faq-item bg-[#333333] border rounded-xl mt-2 overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              Does DEMS replace healthcare professionals?
+          <div
+            class="faq-item bg-[#333333] border border-[#333333] rounded-xl mt-2 overflow-hidden transition-all duration-300">
+            <button
+              class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
+              <span>Does DEMS replace healthcare professionals?</span>
+              <span class="toggle-icon text-2xl">+</span>
             </button>
             <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
               No. DEMS is a tool designed to assist doctors and nurses by providing real-time data to support quick and
@@ -190,34 +281,6 @@
             </div>
           </div>
 
-          <div class="faq-item bg-[#333333] border rounded-xl mt-2 overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              Do I need the internet to use DEMS?
-            </button>
-            <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
-              DEMS can work via Bluetooth or Wi-Fi, depending on the environment. In areas without internet access, data
-              can be temporarily stored and transmitted once a connection is available.
-            </div>
-          </div>
-
-          <div class="faq-item bg-[#333333] border rounded-xl mt-2 overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              Is the system compatible with other hospital platforms?
-            </button>
-            <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
-              Yes! DEMS can be integrated with hospital management systems (HIS) and electronic health records (EHR) to
-              facilitate data sharing across different departments.
-            </div>
-          </div>
-
-          <div class="faq-item bg-[#333333] border rounded-xl mt-2 overflow-hidden transition-all duration-300">
-            <button class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 transition-all duration-300">
-              How can I get more details?
-            </button>
-            <div class="faq-content hidden px-7 pb-4 text-base text-white transition-all duration-300">
-              For more information, please reach out to us through the "Contact" section on the website.
-            </div>
-          </div>
         </div>
       </section>
     </div>
@@ -234,7 +297,8 @@
         </div>
 
         <!-- Lado Direito - Formulário -->
-        <div class="p-8 rounded-lg border shadow-lg w-full max-w-lg mx-auto bg-[#262626]">
+        <div
+          class="p-8 rounded-lg border border-[rgba(255,255,255,0.3)] shadow-lg w-full max-w-lg mx-auto bg-[#262626]">
           <h1 class="text-2xl font-semibold text-center text-white mb-6">Contact Us</h1>
           <form action="#" method="POST" class="space-y-6">
             <div class="flex flex-col">
@@ -303,5 +367,49 @@
       </div>
   </main>
 </body>
+
+<script>
+  document.querySelectorAll(".faq-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector(".toggle-icon");
+
+      // Fecha todos os outros botões
+      document.querySelectorAll(".faq-toggle").forEach(otherButton => {
+        if (otherButton !== button) {
+          const otherContent = otherButton.nextElementSibling;
+          const otherIcon = otherButton.querySelector(".toggle-icon");
+
+          otherContent.classList.add("hidden"); // Fecha o conteúdo
+          otherIcon.textContent = "+"; // Restaura o ícone para "+"
+        }
+      });
+
+      // Alterna o estado do conteúdo e do ícone para o botão clicado
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        icon.textContent = "−"; // Troca para "-"
+      } else {
+        content.classList.add("hidden");
+        icon.textContent = "+"; // Volta para "+"
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const squares = document.querySelector('.squares');
+    if (!squares) {
+      console.error("Elemento .squares não encontrado!");
+      return;
+    }
+
+    for (var i = 1; i <= 165; i++) {
+      const level = Math.floor(Math.random() * 3);
+      squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
+    }
+
+    console.log("Quadrados adicionados:", squares.children.length);
+  });
+</script>
 
 </html>
