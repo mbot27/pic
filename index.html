@@ -17,220 +17,482 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="mt-2 min-h-screen flex justify-center bg-black">
-
-  <!-- Main container -->
-  <main class="bg-black text-black w-full flex flex-col items-center max-w-[1400px] px-4 sm:px-8 lg:px-16">
-    <!--Nav-->
-    <nav class="py-5 sm:py-6 lg:py-8 flex justify-between items-center w-full flex-wrap">
-      <a href="index.html" class="text-2xl cursor-pointer sm:text-3xl lg:text-4xl text-white font-bold">DEMS</a>
+<body class="mt-2 min-h-screen flex justify-center bg-cyan-50">
+  <main class="bg-cyan-50 text-black w-full flex flex-col items-center px-4 sm:px-8 lg:px-16">
+    <nav class="w-full max-w-[2000px] py-5 sm:py-6 lg:py-8 flex justify-between items-center flex-wrap">
+      <a href="index.html" class="text-2xl cursor-pointer sm:text-3xl lg:text-4xl text-cyan-600 font-bold">DEMS</a>
       <div class="space-x-4 sm:space-x-8 flex items-center">
-        <button
-          class="bg-white text-black px-5 text-base sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#42FD64] duration-300 ease-in-out text-sm sm:text-base">Contact</button>
+        <button href="#contact" class="bg-white text-black px-5 text-base sm:px-6 py-2 sm:py-3 rounded-full 
+          relative overflow-hidden group transition-all duration-300 ease-in-out">
+          <span class="relative z-10 transition-colors duration-300 group-hover:text-white">Contact</span>
+          <div class="absolute inset-0 bg-cyan-600 transform scale-x-0 group-hover:scale-x-100 
+          transition-transform duration-300 origin-left"></div>
+        </button>
         <button id="menu-btn" aria-expanded="false" aria-label="Open menu"
-          class="bg-[#42FD64] rounded-full p-2 sm:p-3 flex justify-center items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-black" fill="none"
+          class="bg-cyan-600 rounded-full p-2 sm:p-3 flex justify-center items-center hidden xl:block">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <button id="scroll-btn" class="hidden xl:block group fixed bottom-20 right-20 p-4 text-white border border-[#262626] hover:border-gray-300 transition duration-300 ease-in-out rounded-full">
-          <svg class="w-6 h-6 text-[#262626] group-hover:text-gray-300 transition duration-300 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13V1m0 0L1 5m4-4 4 4"/>
-        </svg>
-        </button>
       </div>
     </nav>
-    <!-- Home -->
-    <section id="home" class="w-full max-w-[1400px] mx-auto">
+
+    <section id="home" class="w-full max-w-[2000px] mx-auto">
       <div class="grid grid-cols-1 w-full text-black text-center mt-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="mt-8 text-6xl sm:text-7xl md:text-7xl lg:text-8xl text-left font-bold tracking-wide leading-none">
-            <span class="block text-white">Dynamic</span>
-            <span class="block text-[#42FD64]">Emergency</span>
-            <span class="block text-[#FDDC42]">Monitoring</span>
-            <span class="block text-[#FD6442]">System</span>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-          <div class="grid grid-cols-4 grid-rows-1 md:grid-rows-2 md:grid-cols-1 gap-4 text-white">
-            <div class="flex flex-col items-start md:items-end md:text-right mt-12 md:mt-12 lg:mt-16">
-              <span class="text-[#42FD64] text-6xl md:text-7xl lg:text-8xl">98<span class="text-base">%</span></span>
-              <span class="text-xl sm:text-3xl">Eficiência</span>
-            </div>
-            <div class="flex flex-col items-start md:items-end md:text-right mt-12 md:mt-4 lg:mt-8">
-              <span class="text-[#42A5FD] text-6xl md:text-7xl lg:text-8xl">85<span class="text-base">ms</span></span>
-              <span class="text-xl sm:text-3xl">Latência</span>
-            </div>
+          <div class="mt-8 text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-left font-bold tracking-wide leading-none">
+            <span class="block text-cyan-900">Dynamic</span>
+            <span class="block text-cyan-900">Emergency</span>
+            <span class="block text-cyan-900">Monitoring</span>
+            <span class="block text-cyan-900">System</span>
           </div>
-
         </div>
 
 
         <div class="w-full">
-          <div class="text-white text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-10 md:mt-12">
+          <div class="text-cyan-900 text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-10 md:mt-12">
             <span class="block">Your Life, Our Priority</span>
             <span class="block xl:ml-8 hidden md:block">Real-Time Care When It Matters Most</span>
             <span class="block xl:ml-8 md:hidden">Real-Time Care</span>
           </div>
         </div>
+      </div>
 
+
+      <div class="w-full mt-12 relative">
+        <img src="assets/medicine.jpeg" alt="Doctors Team" class="w-full h-auto object-cover rounded-xl shadow-lg">
       </div>
     </section>
 
-    <div class="bg-[#262626] mt-60 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
-      <!-- About Section -->
+    <div class="bg-cyan-700 mt-60 rounded-3xl px-8 md:px-16 py-16 w-full max-w-[2000px] mx-auto">
       <section id="about" class="text-white about-feature-section">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-[35%_65%] gap-8 md:gap-12 items-start">
           <div class="text-left text-4xl about-text">
-            About <span class="font-semibold  text-[#42FD64] italic"
-              style="font-family: 'Playfair Display', serif;">DEMS</span>
+            About <span class="font-semibold text-cyan-500" style="font-family: 'Playfair Display', serif;">DEMS</span>
           </div>
-          <p class="text-lg text-justify about-text">
+          <p class="text-lg text-justify about-text max-w-[95%]">
             DEMS (Dynamic Emergency Monitoring System) is a cutting-edge technology designed to monitor vital signs in
-            real-time, ensuring rapid emergency response and optimized healthcare management.
+            real-time, ensuring rapid emergency response and optimized healthcare management. Our innovative system
+            combines
+            advanced sensor technology with artificial intelligence to provide continuous monitoring of patients' vital
+            signs,
+            enabling healthcare professionals to make informed decisions quickly and efficiently. By leveraging
+            real-time data
+            analytics and predictive algorithms, DEMS helps identify potential health risks before they become critical,
+            ultimately improving patient outcomes and revolutionizing emergency care delivery.
           </p>
         </div>
-
-        <!-- Features -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-8 about-feature-section">
-          <div class="flex flex-col items-center about-text">
-            <figure class="text-center">
-              <img src="assets/efficiency.png" alt="Efficiency" class="w-40 h-40 object-cover rounded-lg mt-12">
-              <figcaption class="text-lg mt-6 text-white">Efficiency</figcaption>
-            </figure>
+          <div class="relative group h-[300px] perspective">
+            <div
+              class="relative w-full h-full transition-all duration-500 transform preserve-3d group-hover:rotate-y-180">
+              <div class="absolute inset-0 bg-cyan-700 rounded-xl p-6 backface-hidden">
+                <img src="assets/effi.png" alt="Efficiency"
+                class="w-40 h-40 object-cover mx-auto mt-8 group-hover:opacity-0 transition-opacity duration-300">
+
+                <h3
+                  class="text-xl text-white font-semibold text-center mt-6 group-hover:opacity-0 transition-opacity duration-300">
+                  Efficiency</h3>
+              </div>
+              <div class="absolute inset-0 bg-cyan-500 rounded-xl p-6 rotate-y-180 backface-hidden">
+                <div
+                  class="flex flex-col items-center justify-center h-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                  <h3 class="text-2xl font-bold mb-4">Efficiency</h3>
+                  <p class="text-center">Optimizing healthcare delivery through real-time monitoring and rapid response
+                    systems.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col items-center about-text">
-            <figure class="text-center">
-              <img src="assets/security.png" alt="Security" class="w-40 h-40 rounded-lg mt-12">
-              <figcaption class="text-lg mt-6 text-white">Security</figcaption>
-            </figure>
+
+          <div class="relative group h-[300px] perspective">
+            <div
+              class="relative w-full h-full transition-all duration-500 transform preserve-3d group-hover:rotate-y-180">
+              <div class="absolute inset-0 bg-cyan-700 rounded-xl p-6 backface-hidden">
+                <img src="assets/security.png" alt="Security"
+                  class="w-40 h-40 object-cover mx-auto mt-8 group-hover:opacity-0 transition-opacity duration-300 brightness-150">
+                <h3
+                  class="text-xl text-white font-semibold text-center mt-6 group-hover:opacity-0 transition-opacity duration-300">
+                  Security</h3>
+              </div>
+              <div class="absolute inset-0 bg-cyan-500 rounded-xl p-6 rotate-y-180 backface-hidden">
+                <div
+                  class="flex flex-col items-center justify-center h-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                  <h3 class="text-2xl font-bold mb-4">Security</h3>
+                  <p class="text-center">Ensuring data protection and patient privacy with advanced encryption
+                    protocols.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col items-center about-text">
-            <figure class="text-center">
-              <img src="assets/innovation.png" alt="Innovation" class="w-40 h-40 rounded-lg mt-12">
-              <figcaption class="text-lg mt-6 text-white">Innovation</figcaption>
-            </figure>
+
+          <div class="relative group h-[300px] perspective">
+            <div
+              class="relative w-full h-full transition-all duration-500 transform preserve-3d group-hover:rotate-y-180">
+              <div class="absolute inset-0 bg-cyan-700 rounded-xl p-6 backface-hidden">
+                <img src="assets/innovation.png" alt="Innovation"
+                  class="w-40 h-40 object-cover mx-auto mt-8 group-hover:opacity-0 transition-opacity duration-300 brightness-200">
+                <h3
+                  class="text-xl text-white font-semibold text-center mt-6 group-hover:opacity-0 transition-opacity duration-300">
+                  Innovation</h3>
+              </div>
+              <div class="absolute inset-0 bg-cyan-500 rounded-xl p-6 rotate-y-180 backface-hidden">
+                <div
+                  class="flex flex-col items-center justify-center h-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                  <h3 class="text-2xl font-bold mb-4">Innovation</h3>
+                  <p class="text-center">Pushing boundaries with cutting-edge technology and innovative solutions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .perspective {
+            perspective: 1000px;
+          }
+
+          .preserve-3d {
+            transform-style: preserve-3d;
+          }
+
+          .backface-hidden {
+            backface-visibility: hidden;
+          }
+
+          .rotate-y-180 {
+            transform: rotateY(180deg);
+          }
+
+          .group:hover .group-hover\:rotate-y-180 {
+            transform: rotateY(180deg);
+          }
+        </style>
+      </section>
+    </div>
+
+    <div class="bg-cyan-700 mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[2000px] mx-auto">
+      <section id="presentations" class="text-white">
+        <h2 class="text-3xl mb-12">
+          Project <span class="text-cyan-500 font-semibold"
+            style="font-family: 'Playfair Display', serif;">Presentations</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Project Proposal -->
+          <div class="group hover:transform hover:scale-105 transition-all duration-300">
+            <a href="assets/Project proposal- group 12 feb.pdf" target="_blank" class="block">
+              <div class="bg-cyan-600 rounded-lg p-6 h-full">
+                <div class="flex items-center space-x-3 mb-4">
+                  <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <h3 class="text-lg font-medium">Project Proposal</h3>
+                </div>
+                <p class="text-sm text-gray-300">Initial project presentation and overview</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Mid Pitch -->
+          <div class="group hover:transform hover:scale-105 transition-all duration-300">
+            <a href="https://www.youtube.com/watch?v=r_ZFiCjbHHk" target="_blank" class="block">
+              <div class="bg-cyan-600 rounded-lg p-6 h-full">
+                <div class="flex items-center space-x-3 mb-4">
+                  <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <h3 class="text-lg font-medium">Mid Pitch</h3>
+                </div>
+                <p class="text-sm text-gray-300">Project progress and development updates</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Final Pitch -->
+          <div class="group hover:transform hover:scale-105 transition-all duration-300">
+            <a href="https://www.youtube.com/watch?v=r_ZFiCjbHHk" target="_blank" class="block">
+              <div class="bg-cyan-600 rounded-lg p-6 h-full">
+                <div class="flex items-center space-x-3 mb-4">
+                  <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <h3 class="text-lg font-medium">Final Pitch</h3>
+                </div>
+                <p class="text-sm text-gray-300">Final project demonstration and results</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
     </div>
 
-    <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
-      <!-- Team Section -->
-      <section id="team" class="text-white">
-        <div class="text-left text-4xl">Meet the<span class="font-semibold italic text-[#42FD64]"
-            style="font-family: 'Playfair Display', serif;"> Team</span></div>
-        <div class="w-full relative mt-12">
-          <div class="swiper multiple-slide-carousel swiper-container relative">
-            <div class="swiper-wrapper mb-16">
-              <div class="swiper-slide">
-                <div
-                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
-                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
-                </div>
-                <div class="text-left text-lg tracking-wide">
-                  <span>Gustavo Zacarias</span>
-                  <span class="text-white text-opacity-40"> Website</span>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
-                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
-                </div>
-                <div class="text-left text-lg tracking-wide">
-                  <span>Gustavo Zacarias</span>
-                  <span class="text-white text-opacity-40"> Website</span>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
-                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
-                </div>
-                <div class="text-left text-lg tracking-wide">
-                  <span>Gustavo Zacarias</span>
-                  <span class="text-white text-opacity-40"> Website</span>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
-                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
-                </div>
-                <div class="text-left text-lg tracking-wide">
-                  <span>Gustavo Zacarias</span>
-                  <span class="text-white text-opacity-40"> Website</span>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
-                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
-                </div>
-                <div class="text-left text-lg tracking-wide">
-                  <span>Gustavo Zacarias</span>
-                  <span class="text-white text-opacity-40"> Website</span>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="bg-[#C8A07B] bg-opacity-90 rounded-tr-3xl h-[728px] w-[503px] flex justify-center items-center overflow-hidden">
-                  <img src="assets/loirinha.png" alt="Gustavo Zacarias" class=" ml-12 w-full h-full object-cover">
-                </div>
-                <div class="text-left text-lg tracking-wide">
-                  <span>Gustavo Zacarias</span>
-                  <span class="text-white text-opacity-40"> Website</span>
-                </div>
-              </div>
+    <div class="bg-cyan-700 mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[2000px] mx-auto">
+      <section id="blog" class="text-white">
+        <div class="flex items-center gap-4 mb-12">
+          <h2 class="text-4xl font-semibold">Blog</h2>
+          <div class="h-[2px] flex-grow bg-gradient-to-r from-cyan-300 to-transparent"></div>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <article class="group relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60 z-10"></div>
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Medical device prototype"
+              class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <span class="text-white text-sm">01 FEB 2024</span>
+              <h3 class="text-xl font-semibold mt-2">Completing the Initial Prototype</h3>
+              <p class="text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Learn
+                about our journey developing the first DEMS prototype...</p>
+            </div>
+          </article>
+
+          <!-- Blog Post 2 -->
+          <article class="group relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60 z-10"></div>
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Design process visualization"
+              class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <span class="text-white text-sm">15 JAN 2024</span>
+              <h3 class="text-xl font-semibold mt-2">Design Challenges & Solutions</h3>
+              <p class="text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Exploring
+                the challenges and solutions in our design process...</p>
+            </div>
+          </article>
+
+          <!-- Blog Post 3 -->
+          <article class="group relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60 z-10"></div>
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Technology stack visualization"
+              class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <span class="text-white text-sm">03 JAN 2024</span>
+              <h3 class="text-xl font-semibold mt-2">Tech Stack Deep Dive</h3>
+              <p class="text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Diving
+                deep into our technical decisions and architecture...</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="blog.html"
+            class="inline-flex items-center gap-2 text-white hover:text-white transition-colors duration-300">
+            <span>View All Posts</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="bg-cyan-700 mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[2000px] mx-auto">
+      <section id="team" class="text-white">
+        <div class="text-left">
+          <h2 class="text-4xl font-semibold leading-tight">
+            Our<span class="text-cyan-500 relative" style="font-family: 'Playfair Display', serif;"> Team
+              <span class="left-0 w-full h-1 bg-[#00DF82] rounded-full"></span>
+            </span>
+          </h2>
+          <p class="text-gray-300 mt-2">Meet the people behind DEMS</p>
+        </div>
+
+        <div class="swiper team-swiper mt-12">
+          <div class="swiper-wrapper">
+            <!-- Team Member 1 -->
+            <div class="swiper-slide">
+              <div class="relative group">
+                <img src="assets/dread.png" alt="Team Member 1" class="w-full h-[400px] object-contain rounded-xl">
+                <div class="text-center mt-4">
+                  <h3 class="text-2xl font-semibold text-white">Filipe Esteves</h3>
+                  <p class="text-gray-300 mt-1">Lead Developer</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a href="mailto:john@dems.com" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="swiper-slide">
+              <div class="relative group">
+                <img src="assets/dread.png" alt="Team Member 2" class="w-full h-[400px] object-contain rounded-xl">
+                <div class="text-center mt-4">
+                  <h3 class="text-2xl font-semibold text-white">João Veríssimo</h3>
+                  <p class="text-gray-300 mt-1">UX Designer</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a href="mailto:john@dems.com" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="swiper-slide">
+              <div class="relative group">
+                <img src="assets/dread.png" alt="Team Member 3" class="w-full h-[400px] object-contain rounded-xl">
+                <div class="text-center mt-4">
+                  <h3 class="text-2xl font-semibold text-white">Marco Matos</h3>
+                  <p class="text-gray-300 mt-1">Backend Engineer</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a href="mailto:john@dems.com" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="swiper-slide">
+              <div class="relative group">
+                <img src="assets/dread.png" alt="Team Member 4" class="w-full h-[400px] object-contain rounded-xl">
+                <div class="text-center mt-4">
+                  <h3 class="text-2xl font-semibold text-white">Tomás Modesto</h3>
+                  <p class="text-gray-300 mt-1">Project Manager</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a href="mailto:john@dems.com" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="swiper-slide">
+              <div class="relative group">
+                <img src="assets/dread.png" alt="Team Member 5" class="w-full h-[400px] object-contain rounded-xl">
+                <div class="text-center mt-4">
+                  <h3 class="text-2xl font-semibold text-white">João Ferreira</h3>
+                  <p class="text-gray-300 mt-1">Frontend Developer</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a href="mailto:john@dems.com" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="swiper-slide">
+              <div class="relative group">
+                <img src="assets/dread.png" alt="Team Member 6" class="w-full h-[400px] object-contain rounded-xl">
+                <div class="text-center mt-4">
+                  <h3 class="text-2xl font-semibold text-white">Gustavo Zacarias</h3>
+                  <p class="text-gray-300 mt-1">UI Designer</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a href="mailto:john@dems.com" class="text-white hover:text-cyan-900 transition-colors">
+                      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
 
-    <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
-      <section id="blog" class="text-white">
-        <div class="text-left text-4xl about-text">
-          Our <span class="font-semibold  text-[#42FD64] italic"
-            style="font-family: 'Playfair Display', serif;">Blog</span>
-        </div>
-        <div class="graph" >
-          <ul class="months">
-            <li>Feb</li>
-            <li>Mar</li>
-            <li>Apr</li>
-            <li>May</li>
-            <li>Jun</li>
-            <li>Jul</li>
-          </ul>
-          <ul class="days">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-          </ul>
-          <ul class="squares">
-          </ul>
-        </div>
-      </section>
-    </div>
-
-    <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
+    <div class="bg-cyan-700 mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[2000px] mx-auto">
       <section id="faq" class="text-white">
         <div class="text-left text-4xl faq-title">
-          Common<span class="font-semibold italic text-[#42FD64]" style="font-family: 'Playfair Display', serif;">
+          Common<span class="font-semibold text-cyan-500" style="font-family: 'Playfair Display', serif;">
             Asked</span>
         </div>
         <div class="hs-accordion-group mt-6">
-
-          <!-- FAQ Item -->
-          <div
-            class="faq-item bg-[#333333] border border-[#333333] rounded-xl overflow-hidden transition-all duration-300">
+          <div class="faq-item bg-cyan-600  border-cyan-600 rounded-xl overflow-hidden transition-all duration-300">
             <button
               class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
               <span>What is DEMS?</span>
@@ -241,9 +503,8 @@
               signs, optimizing emergency response and healthcare management.
             </div>
           </div>
-
           <div
-            class="faq-item bg-[#333333] border border-[#333333] rounded-xl mt-2 overflow-hidden transition-all duration-300">
+            class="faq-item bg-cyan-600  border-bg-cyan-600 rounded-xl mt-2 overflow-hidden transition-all duration-300">
             <button
               class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
               <span>How does DEMS work?</span>
@@ -254,9 +515,8 @@
               automatically transmitting the data to a central system that helps prioritize medical care.
             </div>
           </div>
-
           <div
-            class="faq-item bg-[#333333] border border-[#333333] rounded-xl mt-2 overflow-hidden transition-all duration-300">
+            class="faq-item bg-cyan-600  border-bg-cyan-600 rounded-xl mt-2 overflow-hidden transition-all duration-300">
             <button
               class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
               <span>Who can use DEMS?</span>
@@ -267,9 +527,8 @@
               preventive monitoring.
             </div>
           </div>
-
           <div
-            class="faq-item bg-[#333333] border border-[#333333] rounded-xl mt-2 overflow-hidden transition-all duration-300">
+            class="faq-item bg-cyan-600  border-bg-cyan-600 rounded-xl mt-2 overflow-hidden transition-all duration-300">
             <button
               class="faq-toggle w-full text-left text-2xl text-white py-6 px-7 flex justify-between items-center transition-all duration-300">
               <span>Does DEMS replace healthcare professionals?</span>
@@ -280,55 +539,87 @@
               efficient decision-making.
             </div>
           </div>
-
         </div>
       </section>
     </div>
 
-    <div class="bg-[#262626] mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[1400px] mx-auto">
+    <div class="bg-cyan-700 mt-4 rounded-3xl px-6 md:px-12 py-12 w-full max-w-[2000px] mx-auto">
       <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Lado Esquerdo - Título e Texto -->
         <div class="flex flex-col justify-center text-white">
-          <h1 class="text-3xl font-semibold mb-4">Get In Touch</h1>
-          <p class="text-lg mb-6">We'd love to hear from you! Please reach out with any questions or comments, and we'll
+          <h1 class="text-4xl font-semibold mb-6">Get In <span class="text-cyan-500">Touch</span></h1>
+          <div class="relative mb-8">
+            <div class="w-20 h-1 bg-cyan-400 rounded-full"></div>
+          </div>
+          <p class="text-lg mb-6 text-white">We'd love to hear from you! Please reach out with any questions or
+            comments, and we'll
             get back to you as soon as possible.</p>
-          <p class="text-lg">Feel free to share your feedback or inquiries, and our team will respond promptly to assist
+          <p class="text-lg text-white">Feel free to share your feedback or inquiries, and our team will respond
+            promptly to assist
             you with whatever you need.</p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center space-x-3 text-gray-300">
+              <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span class="text-white">dems@dems.com</span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-300">
+              <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span class="text-white">+351 912 345 678</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Lado Direito - Formulário -->
-        <div
-          class="p-8 rounded-lg border border-[rgba(255,255,255,0.3)] shadow-lg w-full max-w-lg mx-auto bg-[#262626]">
-          <h1 class="text-2xl font-semibold text-center text-white mb-6">Contact Us</h1>
-          <form action="#" method="POST" class="space-y-6">
-            <div class="flex flex-col">
-              <label for="name" class="text-sm text-white mb-2">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Your Name" required
-                class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#42FD64]">
-            </div>
-            <div class="flex flex-col">
-              <label for="email" class="text-sm text-white mb-2">Email:</label>
-              <input type="email" id="email" name="email" placeholder="Your Email" required
-                class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#42FD64]">
-            </div>
-            <div class="flex flex-col">
-              <label for="message" class="text-sm text-white mb-2">Message:</label>
-              <textarea id="message" name="message" placeholder="Type your message" required
-                class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#42FD64] resize-y min-h-[100px]"></textarea>
-            </div>
-            <button type="submit"
-              class="w-full py-3 bg-[#42FD64] text-black rounded-md hover:bg-[#42FD64] focus:outline-none">Enviar</button>
-          </form>
+        <div class="relative">
+          <div
+            class="absolute -z-10 w-72 h-72 bg-[#00DF82] rounded-full blur-[120px] opacity-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          </div>
+          <div
+            class="p-8 rounded-2xl border bg-cyan-600 border-cyan-600  shadow-xl w-full max-w-lg mx-auto bg-[#262626]/80">
+            <h2 class="text-2xl font-semibold text-center text-white mb-8">Send us a message</h2>
+            <form action="#" method="POST" class="space-y-6">
+              <div class="flex flex-col">
+                <label for="name" class="text-sm text-white mb-2">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required
+                  class="px-4 py-3 bg-white border border-cyan-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00DF82] focus:border-transparent transition-all duration-300 placeholder-gray-500">
+              </div>
+              <div class="flex flex-col">
+                <label for="email" class="text-sm text-white mb-2">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required
+                  class="px-4 py-3 bg-white border border-cyan-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00DF82] focus:border-transparent transition-all duration-300 placeholder-gray-500">
+              </div>
+              <div class="flex flex-col">
+                <label for="message" class="text-sm text-white mb-2">Message</label>
+                <textarea id="message" name="message" placeholder="Type your message" required
+                  class="px-4 py-3 bg-white border border-cyan-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00DF82] focus:border-transparent transition-all duration-300 resize-none h-32 placeholder-gray-500"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full py-4 bg-cyan-900 text-white rounded-lg hover:bg-cyan-400/90 focus:outline-none focus:ring-2 focus:ring-[#00DF82] focus:ring-offset-2 focus:ring-offset-[#262626] transition-all duration-300 font-semibold text-sm uppercase tracking-wider flex items-center justify-center space-x-2">
+                <span>Send Message</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </div>
 
+    <footer class="w-full bg-cyan-700 text-center mt-4 px-6 md:px-12 py-12 rounded-lg text-white">
+      <div>
+        <p class="text-white">&copy; 2025 DEMS. All rights reserved.</p>
+      </div>
+    </footer>
 
-
-    <!-- Sidebar -->
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
     <div id="menu"
-      class="fixed top-0 right-0 h-full w-[300px] sm:w-[400px] bg-[#151515] transform translate-x-full transition-transform duration-500 ease-out flex flex-col items-start pt-[160px] shadow-lg z-50">
+      class="fixed top-0 right-0 h-full w-[300px] sm:w-[400px] bg-cyan-900 transform translate-x-full transition-transform duration-500 ease-out flex flex-col items-start pt-[160px] shadow-lg z-50">
       <button id="close-btn" class="absolute top-6 right-6 text-white" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor"
           stroke-width="1.5" fill="none">
@@ -352,7 +643,7 @@
           <img src="assets/team.svg" alt="Team Icon">
           <span>Team</span>
         </a>
-        <a href="#" class="menu-item">
+        <a href="#blog" class="menu-item">
           <img src="assets/blog.svg" alt="Blog Icon">
           <span>Blog</span>
         </a>
@@ -365,51 +656,130 @@
           <span>Contact</span>
         </a>
       </div>
+    </div>
   </main>
-</body>
+  <button id="scroll-btn" class="fixed bottom-10 right-10 p-4 text-white border border-gray-300 
+         hover:border-white transition duration-300 ease-in-out rounded-full shadow-lg rotate-180">
+    <svg id="arrow-icon" class="w-6 h-6 text-gray-300 transition duration-300 ease-in-out transform" aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+        d="M5 13V1m0 0L1 5m4-4 4 4" />
+    </svg>
+  </button>
 
-<script>
-  document.querySelectorAll(".faq-toggle").forEach(button => {
-    button.addEventListener("click", () => {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector(".toggle-icon");
+  <style>
+    @media (min-width: 2000px) {
+      .max-w-\[2000px\] {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
 
-      // Fecha todos os outros botões
-      document.querySelectorAll(".faq-toggle").forEach(otherButton => {
-        if (otherButton !== button) {
-          const otherContent = otherButton.nextElementSibling;
-          const otherIcon = otherButton.querySelector(".toggle-icon");
+    .sliding-text-container {
+      background-color: #03624C;
+    }
 
-          otherContent.classList.add("hidden"); // Fecha o conteúdo
-          otherIcon.textContent = "+"; // Restaura o ícone para "+"
+    .sliding-text-wrapper {
+      transform: translateX(100%);
+      transition: transform 1s ease-out, opacity 0.5s ease-in;
+    }
+
+    .sliding-text-wrapper.active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .sliding-text-wrapper.exit {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    document.querySelectorAll(".faq-toggle").forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector(".toggle-icon");
+
+        document.querySelectorAll(".faq-toggle").forEach(otherButton => {
+          if (otherButton !== button) {
+            const otherContent = otherButton.nextElementSibling;
+            const otherIcon = otherButton.querySelector(".toggle-icon");
+
+            otherContent.classList.add("hidden");
+            otherIcon.textContent = "+";
+          }
+        });
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.textContent = "−";
+        } else {
+          content.classList.add("hidden");
+          icon.textContent = "+";
         }
       });
-
-      // Alterna o estado do conteúdo e do ícone para o botão clicado
-      if (content.classList.contains("hidden")) {
-        content.classList.remove("hidden");
-        icon.textContent = "−"; // Troca para "-"
-      } else {
-        content.classList.add("hidden");
-        icon.textContent = "+"; // Volta para "+"
-      }
     });
-  });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const squares = document.querySelector('.squares');
-    if (!squares) {
-      console.error("Elemento .squares não encontrado!");
-      return;
+    function animateCounter(elementId, finalValue, duration) {
+      const element = document.getElementById(elementId);
+      const startTime = performance.now();
+
+      function easeOutQuart(x) {
+        return 1 - Math.pow(1 - x, 4);
+      }
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        const easedProgress = easeOutQuart(progress);
+        const currentValue = Math.max(0, Math.round(easedProgress * finalValue));
+
+        element.textContent = currentValue;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+
+      requestAnimationFrame(update);
     }
+    document.addEventListener('DOMContentLoaded', () => {
+      animateCounter('efficiency-counter', 98, 1200);
+      animateCounter('latency-counter', 85, 1200);
+    });
 
-    for (var i = 1; i <= 165; i++) {
-      const level = Math.floor(Math.random() * 3);
-      squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
-    }
+    // Initialize Swiper
+    const swiper = new Swiper('.team-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      speed: 10000,
+      freeMode: {
+        enabled: true,
+        momentum: true,
+        momentumRatio: 0.4,
+        momentumVelocityRatio: 0.5,
+      },
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
 
-    console.log("Quadrados adicionados:", squares.children.length);
-  });
-</script>
+</body>
 
 </html>
